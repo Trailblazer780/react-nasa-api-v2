@@ -1,0 +1,12 @@
+ul,
+ol {
+    @apply list-outside my-4 ml-4;
+}
+
+ul {
+    @apply list-disc;
+}
+
+ol {
+    @apply list-decimal;
+}
