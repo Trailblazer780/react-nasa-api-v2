@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import Logo from '../../../assets/logo.png';
+import Footer from '../../Footer';
 
 const Error:React.FC = () => {
 
@@ -28,6 +29,7 @@ const Error:React.FC = () => {
                 </div>
             </main>
             </div>
+            <Footer />
         </>
     );
 }

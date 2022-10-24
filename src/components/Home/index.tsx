@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import APOD from "./APOD";
-import { HomeProps, APODData } from '../../tools/data.model';
+import { APODData } from '../../tools/data.model';
 
 const API_KEY:string = "YebcvNe2gk1kOzI5NxfnX0hhfwSVg4BV7mY9sFrE";
 const APOD_SCRIPT:string = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY;

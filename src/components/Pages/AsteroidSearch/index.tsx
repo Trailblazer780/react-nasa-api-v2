@@ -1,17 +1,15 @@
-
+import Search from "../../Search"
 
 const AsteroidSearch = () => {
 
     return (
         <>
             <div className="container">
-                <h1>
-                    Asteroid Search
-                </h1>  
+                <Search />
             </div>
         </>
     )
 
 }
 
-export default AsteroidSearch
+export default AsteroidSearch;

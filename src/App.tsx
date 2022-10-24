@@ -9,7 +9,6 @@ import AsteroidSearch from './components/Pages/AsteroidSearch';
 import EPIC from './components/Pages/EPIC';
 import Asteroid from './components/Pages/Asteroid';
 import Error from './components/Pages/Error';
-import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -30,7 +29,6 @@ function App() {
         <Route path="/epic" element={<EPIC />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Footer />
     </>
   );
 }

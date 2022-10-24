@@ -1,8 +1,7 @@
 import {useState} from 'react';
-import APOD from '../../Home/APOD';
-import { HomeProps } from '../../../tools/data.model';
 import '../../../assets/css/custom.css';
 import HomeComponent from '../../Home';
+import Footer from '../../Footer';
 import LoadingOverlay from '../../LoadingOverylay/LoadingOverlay';
 
 const Home = () => {
@@ -13,6 +12,7 @@ const Home = () => {
             <LoadingOverlay enabled={loading} bgColor={"#494949"} spinnerColor={"#4fa94d"}/>
             <div className="relative">
                 <HomeComponent setLoading={setLoading} />
+                {!loading && <Footer />}
             </div>
         </>
     )
