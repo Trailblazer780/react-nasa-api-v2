@@ -34,7 +34,7 @@ const HomeComponent:React.FC<Props> = (props) => {
 
     if (!data) {
         return (
-            <p>no data</p>
+            <div></div>
         )
     }
 

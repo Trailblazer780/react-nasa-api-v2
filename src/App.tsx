@@ -1,5 +1,7 @@
+import {useEffect} from 'react';
 import {Routes, Route} from 'react-router-dom';
 import "./App.css";
+import 'animate.css';
 import Header from './components/Header/Header';
 import Home from "./components/Pages/Home";
 import NearEarthAsteroids from './components/Pages/NearEarthAsteroids';
@@ -8,9 +10,14 @@ import EPIC from './components/Pages/EPIC';
 import Asteroid from './components/Pages/Asteroid';
 import Error from './components/Pages/Error';
 import Footer from './components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
 
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   return (
     <>
