@@ -1,6 +1,9 @@
 import {useRef} from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Search:React.FC = () => {
+    
+    const navigate = useNavigate();
 
     const neoIdInputRef = useRef<HTMLInputElement>(null);
 
@@ -9,6 +12,7 @@ const Search:React.FC = () => {
         event.preventDefault();
         const enteredId = neoIdInputRef.current!.value;
         console.log(enteredId);
+        navigate(`/asteroid/${enteredId}`);
     }
 
     return (

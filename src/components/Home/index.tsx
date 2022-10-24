@@ -30,11 +30,11 @@ const HomeComponent:React.FC<Props> = (props) => {
             props.setLoading(false);
         });
 
-    }, []);
+    }, [props]);
 
     if (!data) {
         return (
-            <div></div>
+            <div className="container">{httpError}</div>
         )
     }
 
