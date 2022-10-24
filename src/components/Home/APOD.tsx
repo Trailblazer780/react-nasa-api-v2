@@ -22,8 +22,8 @@ const APOD:React.FC<Props> = (props) => {
                     {props.data.media_type === "image" ? <a href={props.data.hdurl} target="_blank" rel="noreferrer"><img className="" alt="" src={props.data.url} onLoad={() => {props.setLoading(false)}}/></a> : <iframe className="APOD" width="853" height="505" src="https://www.youtube.com/embed/NS71ppsk7n0?rel=0" onLoad={() => {props.setLoading(false)}}> </iframe>}
                 </div>
             </div>
-            <div className="relative flex flex-col justify-center items-center py-2">
-                <div className="px-6 pb-8 w-full rounded-xl shadow-lg border bg-gray-700 border-primary-500" data-aos="fade-up">
+            <div className="relative flex flex-col justify-center items-center py-2 animate__animated animate__fadeIn animate__delay-3s">
+                <div className="px-6 pb-8 w-full rounded-xl shadow-lg border bg-gray-700 border-primary-500">
                     <h2 className="text-center m-2 text-4xl text-primary-500">Photo Explaination</h2>
                     <p className="text-white text-xl ">{props.data.explanation}</p>
                 </div>
