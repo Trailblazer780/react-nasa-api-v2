@@ -61,30 +61,30 @@ const AsteroidItem: React.FC<Props> = (props) => {
                     <tr className="divide-x divide-primary-500">
                       <th
                         scope="col"
-                        className="py-3.5 pl-4 pr-4 text-left font-semibold text-primary-500 sm:pl-6"
+                        className="py-3.5 pl-4 pr-4 text-sm md:text-base text-left font-semibold text-primary-500 sm:pl-6"
                       >
                         Data Type
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-center font-semibold text-primary-500"
+                        className="px-4 py-3.5 text-sm md:text-base text-center font-semibold text-primary-500"
                       >
                         Data
                       </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-primary-500 bg-gray-700">
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Date First Observed</td><td className="whitespace-nowrap  py-4 pl-4 pr-4 text-base font-medium text-gray-200 sm:pl-6 text-center">{data.orbital_data.first_observation_date}</td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Most Recent Observation</td><td className="whitespace-nowrap p-4 text-base text-gray-200 text-center">{data.orbital_data.last_observation_date}</td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Orbit ID</td><td className="whitespace-nowrap p-4 text-base text-gray-200 text-center">{data.orbital_data.orbit_id}</td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Potential Hazard</td><td className="whitespace-nowrap px-3 py-4 text-base text-gray-200 text-center">
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Date First Observed</td><td className="whitespace-nowrap  py-4 pl-4 pr-4 text-sm md:text-base font-medium text-gray-200 sm:pl-6 text-center">{data.orbital_data.first_observation_date}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Most Recent Observation</td><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200 text-center">{data.orbital_data.last_observation_date}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Orbit ID</td><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200 text-center">{data.orbital_data.orbit_id}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Potential Hazard</td><td className="whitespace-nowrap px-3 py-4 text-sm md:text-base text-gray-200 text-center">
                             {data.is_potentially_hazardous_asteroid && <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Yes</span>}
                             {!data.is_potentially_hazardous_asteroid && <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">No</span>}
                     </td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Absolute Magnitude</td><td className="whitespace-nowrap p-4 text-base text-gray-200 text-center">{data.absolute_magnitude_h}</td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Orbit Class</td><td className="whitespace-nowrap p-4 text-base text-gray-200 text-center">{data.orbital_data.orbit_class.orbit_class_type}</td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Estimated Diameter min/max (km)</td><td className="whitespace-nowrap p-4 text-base text-gray-200 text-center">{data.estimated_diameter.kilometers.estimated_diameter_min.toFixed(2)}/{data.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2)}</td></tr>
-                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-base text-gray-200">Estimated Diameter min/max (ft)</td><td className="whitespace-nowrap p-4 text-base text-gray-200 text-center">{data.estimated_diameter.feet.estimated_diameter_min.toFixed(2)}/{data.estimated_diameter.feet.estimated_diameter_max.toFixed(2)}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Absolute Magnitude</td><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200 text-center">{data.absolute_magnitude_h}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Orbit Class</td><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200 text-center">{data.orbital_data.orbit_class.orbit_class_type}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Estimated Diameter min/max (km)</td><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200 text-center">{data.estimated_diameter.kilometers.estimated_diameter_min.toFixed(2)}/{data.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2)}</td></tr>
+                    <tr className="divide-x divide-primary-500 hover:bg-gray-600"><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">Estimated Diameter min/max (ft)</td><td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200 text-center">{data.estimated_diameter.feet.estimated_diameter_min.toFixed(2)}/{data.estimated_diameter.feet.estimated_diameter_max.toFixed(2)}</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -108,25 +108,25 @@ const AsteroidItem: React.FC<Props> = (props) => {
                     <tr className="divide-x divide-primary-500">
                       <th
                         scope="col"
-                        className="py-3.5 pl-4 pr-4 text-left font-semibold text-primary-500 sm:pl-6"
+                        className="py-3.5 pl-4 pr-4 text-sm md:text-base text-left font-semibold text-primary-500 sm:pl-6"
                       >
                         Date
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-center font-semibold text-primary-500"
+                        className="px-4 py-3.5 text-sm md:text-base text-center font-semibold text-primary-500"
                       >
                         Velocity (Km/h)
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-center font-semibold text-primary-500"
+                        className="hidden md:block px-4 py-3.5 text-sm md:text-base text-center font-semibold text-primary-500"
                       >
                         Miss Distance (Km)
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-center font-semibold text-primary-500"
+                        className="px-4 py-3.5 text-sm md:text-base text-center font-semibold text-primary-500"
                       >
                         Orbiting Body
                       </th>
@@ -134,10 +134,10 @@ const AsteroidItem: React.FC<Props> = (props) => {
                   </thead>
                   <tbody className="divide-y divide-primary-500 bg-gray-700">
                     {data.close_approach_data.map((closeApproach:CloseApproach ) => { return <tr className="divide-x divide-primary-500 hover:bg-gray-600">
-                    <td className="whitespace-nowrap p-4 text-base text-gray-200">{closeApproach.close_approach_date_full}</td>
-                    <td className="whitespace-nowrap p-4 text-base text-gray-200">{parseFloat(closeApproach.relative_velocity.kilometers_per_hour).toFixed(0)}</td>
-                    <td className="whitespace-nowrap p-4 text-base text-gray-200">{parseFloat(closeApproach.miss_distance.kilometers).toFixed(0)}</td>
-                    <td className="whitespace-nowrap p-4 text-base text-gray-200">{closeApproach.orbiting_body}</td></tr>})}
+                    <td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">{closeApproach.close_approach_date_full}</td>
+                    <td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">{parseFloat(closeApproach.relative_velocity.kilometers_per_hour).toFixed(0)} Km/h</td>
+                    <td className="hidden md:block whitespace-nowrap p-4 text-sm md:text-base text-gray-200">{parseFloat(closeApproach.miss_distance.kilometers).toFixed(0)}</td>
+                    <td className="whitespace-nowrap p-4 text-sm md:text-base text-gray-200">{closeApproach.orbiting_body}</td></tr>})}
                   </tbody>
                 </table>
               </div>
