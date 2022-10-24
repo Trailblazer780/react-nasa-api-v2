@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 import "./App.css";
 import 'animate.css';
 import Header from './components/Header/Header';
@@ -24,8 +24,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/near-earth-objects" element={<NearEarthAsteroids />} />
-        <Route path="/asteroid-serach" element={<AsteroidSearch />} />
+        <Route path="/asteroid-search" element={<AsteroidSearch />} />
         <Route path="/asteroid/:id" element={<Asteroid />} />
+        <Route path="/asteroid" element={<Navigate to="/asteroid-search" replace={true} />} />
         <Route path="/epic" element={<EPIC />} />
         <Route path="*" element={<Error />} />
       </Routes>

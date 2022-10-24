@@ -1,11 +1,12 @@
 import Search from "../../Search"
-
+import Footer from "../../Footer";
 const AsteroidSearch = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="">
                 <Search />
+                <Footer />
             </div>
         </>
     )

@@ -18,7 +18,7 @@ const Footer:React.FC = () => {
                     </div>
 
                     <div className="px-5 py-2">
-                        <NavLink to="/asteroid-serach" className={navData => navData.isActive ? ACTIVE_LINK_STYLES : INACTIVE_LINK_STYLES } end>Asteroid Search</NavLink>
+                        <NavLink to="/asteroid-search" className={navData => navData.isActive ? ACTIVE_LINK_STYLES : INACTIVE_LINK_STYLES } end>Asteroid Search</NavLink>
                     </div>
 
                     <div className="px-5 py-2">
