@@ -58,6 +58,7 @@ const NEO: React.FC<Props> = (props) => {
                 <span className="hidden md:inline">Asteroids Near Earth Right Now: {data.element_count}</span>
             </h2>
             <h2 className="ml-3 text-white text-center text-lg md:text-xl lg:text-2xl">** Some columns in this table are hidden on mobile **</h2>
+            <p className="ml-3 text-white text-center text-lg md:text-xl lg:text-2xl">Hint: You can click on the NEO ID to get more Information about that specific NEO </p>
         </div>
     </div>
       <div className="px-4 sm:px-6 lg:px-8">
@@ -72,7 +73,7 @@ const NEO: React.FC<Props> = (props) => {
                         scope="col"
                         className="py-3.5 pl-4 pr-4 text-center font-semibold text-primary-500 sm:pl-6"
                       >
-                        Asteroid ID
+                        NEO ID
                       </th>
                       <th
                         scope="col"
