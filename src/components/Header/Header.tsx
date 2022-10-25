@@ -28,14 +28,14 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
-                        <NavLink to="/" className="text-base font-medium text-white hover:text-indigo-50">Home</NavLink>
-                        <NavLink to="/near-earth-objects" className="text-base font-medium text-white hover:text-indigo-50">Near Earth Objects</NavLink>
+                    <div className="flex flex-col justify-center py-4 lg:hidden">
+                        <NavLink to="/" className={navData => navData.isActive ? ACTIVE_LINK_STYLES : INACTIVE_LINK_STYLES } end>Home</NavLink>
+                        <NavLink to="/near-earth-objects" className={navData => navData.isActive ? ACTIVE_LINK_STYLES : INACTIVE_LINK_STYLES } end>Near Earth Objects</NavLink>
 
-                        <NavLink to="/asteroid-serach" className="text-base font-medium text-white hover:text-indigo-50">Asteroid Search</NavLink>
+                        <NavLink to="/asteroid-serach" className={navData => navData.isActive ? ACTIVE_LINK_STYLES : INACTIVE_LINK_STYLES } end>Asteroid Search</NavLink>
 
-                        <NavLink to="/epic" className="text-base font-medium text-white hover:text-indigo-50">EPIC</NavLink>
-                    </div> */}
+                        <NavLink to="/epic" className={navData => navData.isActive ? ACTIVE_LINK_STYLES : INACTIVE_LINK_STYLES } end>EPIC</NavLink>
+                    </div>
                 </nav>
             </div>
         </header>

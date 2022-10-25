@@ -53,7 +53,7 @@ const NEO: React.FC<Props> = (props) => {
     <div className="relative flex flex-col justify-center items-center py-2">
         <div className="px-6 pb-8 w-full rounded-xl shadow-lg border bg-gray-700 border-primary-500 animate__animated animate__fadeIn">
             <h1 className="animate__animated animate__fadeIn text-center mb-2 text-2xl lg:text-4xl font-bold tracking-tight text-primary-500">Near Earth Objects</h1>
-            <h2 className="ml-3 truncate text-white text-center text-lg md:text-2xl lg:text-4xl">
+            <h2 className="ml-3 text-white text-center text-lg md:text-2xl lg:text-4xl">
                 <span className="md:hidden">Asteroids Near Earth Right Now: {data.element_count}</span>
                 <span className="hidden md:inline">Asteroids Near Earth Right Now: {data.element_count}</span>
             </h2>
@@ -81,19 +81,19 @@ const NEO: React.FC<Props> = (props) => {
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-left font-semibold text-primary-500"
+                        className="hidden lg:table-cell px-4 py-3.5 text-left font-semibold text-primary-500"
                       >
                         Asteroid Velocity (Km/h)
                       </th>
                       <th
                         scope="col"
-                        className="py-3.5 pl-4 pr-4 text-left font-semibold text-primary-500 sm:pr-6"
+                        className="hidden lg:table-cell py-3.5 pl-4 pr-4 text-left font-semibold text-primary-500 sm:pr-6"
                       >
                         Asteroid Diameter min/max (km)
                       </th>
                       <th
                         scope="col"
-                        className="px-3 py-3.5 text-left font-semibold text-primary-500"
+                        className="hidden lg:table-cell px-3 py-3.5 text-left font-semibold text-primary-500"
                       >
                         Asteroid Distance (km)
                       </th>

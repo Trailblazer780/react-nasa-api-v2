@@ -44,7 +44,7 @@ const AsteroidItem: React.FC<Props> = (props) => {
         <div className="relative flex flex-col justify-center items-center py-2">
             <div className="px-6 pb-8 w-full rounded-xl shadow-lg border bg-gray-700 border-primary-500 animate__animated animate__fadeIn">
                 <h1 className="animate__animated animate__fadeIn text-center mb-2 text-2xl lg:text-4xl font-bold tracking-tight text-primary-500">Information about Asteroid: {data.name}</h1>
-                <h2 className="ml-3 truncate text-white text-center text-lg md:text-2xl lg:text-4xl">
+                <h2 className="ml-3 text-white text-center text-lg md:text-2xl lg:text-4xl">
                     <span className="md:hidden">NEO ID: {data.id}</span>
                     <span className="hidden md:inline">NEO ID: {data.id}</span>
                 </h2>
