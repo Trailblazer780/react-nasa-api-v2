@@ -1,16 +1,19 @@
-import {useEffect} from 'react';
+import React, {useEffect, Suspense} from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import "./App.css";
 import 'animate.css';
 import Header from './components/Header/Header';
 import Home from "./components/Pages/Home";
-import NearEarthAsteroids from './components/Pages/NearEarthAsteroids';
-import AsteroidSearch from './components/Pages/AsteroidSearch';
-import EPIC from './components/Pages/EPIC';
-import Asteroid from './components/Pages/Asteroid';
-import Error from './components/Pages/Error';
+import LoadingOverlay from './components/LoadingOverylay/LoadingOverlay';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+
+const NearEarthAsteroids = React.lazy(() => import('./components/Pages/NearEarthAsteroids'));
+const AsteroidSearch = React.lazy(() => import('./components/Pages/AsteroidSearch'));
+const EPIC = React.lazy(() => import('./components/Pages/EPIC'));
+const Asteroid = React.lazy(() => import('./components/Pages/Asteroid'));
+const Error = React.lazy(() => import('./components/Pages/Error'));
 
 function App() {
 
@@ -21,6 +24,7 @@ function App() {
   return (
     <>
       <Header />
+      <Suspense fallback={<LoadingOverlay enabled={true} bgColor={"#494949"} spinnerColor={"#4fa94d"}/>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/near-earth-objects" element={<NearEarthAsteroids />} />
@@ -30,6 +34,7 @@ function App() {
         <Route path="/epic" element={<EPIC />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      </Suspense>
     </>
   );
 }
