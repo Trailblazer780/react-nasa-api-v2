@@ -57,6 +57,7 @@ const NEO: React.FC<Props> = (props) => {
                 <span className="md:hidden">Asteroids Near Earth Right Now: {data.element_count}</span>
                 <span className="hidden md:inline">Asteroids Near Earth Right Now: {data.element_count}</span>
             </h2>
+            <h2 className="ml-3 text-white text-center text-lg md:text-xl lg:text-2xl">** Some columns in this table is hidden on mobile **</h2>
         </div>
     </div>
       <div className="px-4 sm:px-6 lg:px-8">
