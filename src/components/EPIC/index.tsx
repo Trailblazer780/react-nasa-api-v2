@@ -69,7 +69,7 @@ const EpicComponent:React.FC<Props> = (props) => {
             props.setLoading(false);
         });
         
-    }, [props, data]);
+    }, [props]);
 
     const imagesLoaded = () => {
         if (loaded === data.length) {
