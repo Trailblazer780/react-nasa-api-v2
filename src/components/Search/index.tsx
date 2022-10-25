@@ -23,7 +23,7 @@ const Search:React.FC = () => {
                 <h1 className="animate__animated animate__fadeIn text-center mb-2 text-2xl lg:text-4xl font-bold tracking-tight text-primary-500">Asteroid Search</h1>
                 <form onSubmit={submitHandler}>
                     <div className="flex w-full justify-center">
-                        <div className="mt-1 flex w-1/2 rounded-md shadow-sm">
+                        <div className="mt-1 flex w-full md:w-1/2 rounded-md shadow-sm">
                             <div className="relative flex flex-grow items-stretch focus-within:z-10">
                             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                                 <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M493.7 .9L299.4 75.6l2.3-29.3c1-12.8-12.8-21.5-24-15.1L101.3 133.4C38.6 169.7 0 236.6 0 309C0 421.1 90.9 512 203 512c72.4 0 139.4-38.6 175.7-101.3L480.8 234.3c6.5-11.1-2.2-25-15.1-24l-29.3 2.3L511.1 18.3c.6-1.5 .9-3.2 .9-4.8C512 6 506 0 498.5 0c-1.7 0-3.3 .3-4.8 .9zM192 448c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-160c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm16 96c8.8 0 16-7.2 16-16s-7.2-16-16-16s-16 7.2-16 16s7.2 16 16 16z"/></svg>
