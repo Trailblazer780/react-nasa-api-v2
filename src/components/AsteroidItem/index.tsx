@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {useNavigate} from "react-router-dom";
 import { Asteroid, CloseApproach } from "../../tools/data.model";
 
 type Props = {
@@ -14,6 +15,7 @@ const AsteroidItem: React.FC<Props> = (props) => {
 
   const [data, setData] = useState<Asteroid>();
   const [httpError, setHttpError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,11 +42,18 @@ const AsteroidItem: React.FC<Props> = (props) => {
     });
   }, [props, ASTEROID_DATA]);
 
+  const backToSearchHandler = () => {
+    navigate(`/asteroid-search`);
+  }
+
   if (httpError) {
     return <div className="container py-8">
-      <div className="relative flex flex-col justify-center items-center py-2">
-        <div className="px-6 pb-8 w-full rounded-xl shadow-lg border bg-gray-700 border-primary-500 animate__animated animate__fadeIn">
+      <div className="relative flex flex-col justify-center items-center py-2 w-full">
+        <div className="flex flex-col w-full px-6 pb-8 rounded-xl shadow-lg border bg-gray-700 border-primary-500 animate__animated animate__fadeIn">
             <h1 className="animate__animated animate__fadeIn text-center mb-2 text-2xl lg:text-4xl font-bold tracking-tight text-primary-500">{httpError}</h1>
+            <div className="w-full flex justify-center">
+              <button className="w-max rounded-lg px-4 py-2 bg-primary-500 text-gray-800 hover:bg-primary-800" onClick={backToSearchHandler}>Back to Search</button>
+            </div>
           </div>
         </div>
       </div>;

@@ -1,4 +1,3 @@
-import {useRef, useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import useInput from '../../hooks/use-input';
 
@@ -8,10 +7,7 @@ const Search:React.FC = () => {
     
     const navigate = useNavigate();
 
-    const neoIdInputRef = useRef<HTMLInputElement>(null);
-
     let formIsValid = false;
-
     
     const {
         value: enteredNeoId,
@@ -25,18 +21,15 @@ const Search:React.FC = () => {
       formIsValid = true;
     }
     const submitHandler = (event: React.FormEvent) => {
-
         event.preventDefault();
-
         if (!enteredNeoIdIsValid){
             return;
         }
-
-
         // const enteredId = neoIdInputRef.current!.value;
         console.log(enteredNeoId);
         navigate(`/asteroid/${enteredNeoId}`);
     }
+
 
     return (
 
@@ -60,7 +53,12 @@ const Search:React.FC = () => {
                         </div>
                     </div>
                 </form>
-                {neoIdInputHasError && (<div className="px-6 py-2 mx-auto w-auto md:w-max rounded-xl border bg-gray-500 border-primary-500"><div className="flex items-center justify-center text-red-800 text-center">NEO ID must not be empty</div></div>)}
+                {neoIdInputHasError && (
+                    <div className="px-6 py-2 mx-auto w-auto md:w-max rounded-xl border bg-gray-500 border-primary-500">
+                        <div className="flex items-center justify-center text-red-800 text-center">
+                            NEO ID must not be empty
+                        </div>
+                    </div>)}
             </div>
         </div>
         </div>
