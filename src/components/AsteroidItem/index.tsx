@@ -13,14 +13,19 @@ const AsteroidItem: React.FC<Props> = (props) => {
     "https://api.nasa.gov/neo/rest/v1/neo/" + props.id + "?api_key=" + API_KEY;
 
   const [data, setData] = useState<Asteroid>();
-  const [httpError, setHttpError] = useState();
+  const [httpError, setHttpError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(ASTEROID_DATA);
 
       if (!response.ok) {
-        throw new Error("Something went wrong!");
+        if(response.status === 404) {
+          throw new Error("Unable to get info on NEO ID: " + props.id);
+        } 
+        else {
+          throw new Error("Uh Oh! Something went wrong!");
+        }
       }
 
       const responseData = await response.json();
@@ -34,6 +39,16 @@ const AsteroidItem: React.FC<Props> = (props) => {
       props.setLoading(false);
     });
   }, [props, ASTEROID_DATA]);
+
+  if (httpError) {
+    return <div className="container py-8">
+      <div className="relative flex flex-col justify-center items-center py-2">
+        <div className="px-6 pb-8 w-full rounded-xl shadow-lg border bg-gray-700 border-primary-500 animate__animated animate__fadeIn">
+            <h1 className="animate__animated animate__fadeIn text-center mb-2 text-2xl lg:text-4xl font-bold tracking-tight text-primary-500">{httpError}</h1>
+          </div>
+        </div>
+      </div>;
+  }
 
   if (!data) {
     return <div className="container">{httpError}</div>;
