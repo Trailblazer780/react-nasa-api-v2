@@ -72,7 +72,7 @@ const AsteroidItem: React.FC<Props> = (props) => {
                     <span className="md:hidden">NEO ID: {data.id}</span>
                     <span className="hidden md:inline">NEO ID: {data.id}</span>
                 </h2>
-                <h2 className="ml-3 text-white text-center text-lg md:text-xl lg:text-2xl">** Some columns in the tables below are hidden on mobile **</h2>
+                <h2 className="block lg:hidden ml-3 text-white text-center text-lg md:text-xl lg:text-2xl">** Some columns in the tables below are hidden on mobile **</h2>
             </div>
         </div>
         {/* ASTEROID DATA TABLE */}
