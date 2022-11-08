@@ -66,9 +66,8 @@ const EpicComponent:React.FC<Props> = (props) => {
         }
         
         fetchData().catch((error) => {
-            console.log("error" + error.message);
+            // console.log("error" + error.message);
             setHttpError(error.message);
-            // props.setLoading(false);
         }).then(() => {
             
             props.setLoading(false);
@@ -105,19 +104,23 @@ const EpicComponent:React.FC<Props> = (props) => {
             <div className="w-full flex flex-col justify-center items-center py-2">
                 <div className="px-6 py-8 w-full h-auto flex justify-center rounded-xl shadow-lg border bg-gray-700 border-primary-500">
                     <div className="w-2/3 sm:1/3 md:1/3 lg:w-1/3">
-                        <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
-                            lazy={true}
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            navigation
-                            pagination={{ clickable: true }}
-                            onSwiper={(swiper) => console.log(swiper)}
-                            onSlideChange={() => console.log('slide change')}
-                        >
-                            {data.map((images:EpicImage, n:number) =>{ return <div key={images.identifier} className=""><SwiperSlide><img className="epic" alt={images.caption} onLoad={() => imagesLoaded()} height={500} width={500} src={url[n]}/></SwiperSlide></div> })}
+                        {httpError && <h1 className="text-center text-2xl text-white">{httpError}</h1>}
 
-                        </Swiper>
+                        {!httpError &&
+                            <Swiper
+                                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                                lazy={true}
+                                spaceBetween={50}
+                                slidesPerView={1}
+                                navigation
+                                pagination={{ clickable: true }}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                onSlideChange={() => console.log('slide change')}
+                            >
+                                {data.map((images:EpicImage, n:number) =>{ return <div key={images.identifier} className=""><SwiperSlide><img className="epic" alt={images.caption} onLoad={() => imagesLoaded()} height={500} width={500} src={url[n]}/></SwiperSlide></div> })}
+
+                            </Swiper>
+                        }   
                     </div>
                 </div>
                 </div>
