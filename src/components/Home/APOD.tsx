@@ -20,7 +20,7 @@ const APOD:React.FC<Props> = (props) => {
 
             <div className="relative blur-everything flex justify-center py-8 animate__animated animate__fadeIn animate__delay-3s z-20">
                 {props.data.media_type === "image" &&
-                    <div className="px-10 py-10 w-max rounded-xl shadow-lg border bg-gray-600 border-primary-500 transition duration-700 hover:scale-125">
+                    <div className="px-10 py-10 w-max rounded-xl shadow-lg border bg-gray-600 border-primary-500 transition duration-700">
                         <a href={props.data.hdurl} target="_blank" rel="noreferrer"><img className="" alt={props.data.title} src={props.data.url} onLoad={() => {props.setLoading(false)}}/></a>
                     </div>}
                 {props.data.media_type === "video" &&
